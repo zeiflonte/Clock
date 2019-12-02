@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Dec 02 17:15:49 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "seven_segment_cathode<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "seven_segment_cathode<1>" LOCATE = SITE "E6" LEVEL 1;
+COMP "seven_segment_cathode<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "seven_segment_cathode<3>" LOCATE = SITE "F7" LEVEL 1;
+COMP "seven_segment_cathode<4>" LOCATE = SITE "D6" LEVEL 1;
+COMP "seven_segment_cathode<5>" LOCATE = SITE "E7" LEVEL 1;
+COMP "seven_segment_cathode<6>" LOCATE = SITE "D5" LEVEL 1;
+COMP "seven_segment_cathode<7>" LOCATE = SITE "C6" LEVEL 1;
+COMP "seven_segment_anode<0>" LOCATE = SITE "D8" LEVEL 1;
+COMP "seven_segment_anode<1>" LOCATE = SITE "E8" LEVEL 1;
+COMP "seven_segment_anode<2>" LOCATE = SITE "F9" LEVEL 1;
+COMP "seven_segment_anode<3>" LOCATE = SITE "F10" LEVEL 1;
+COMP "seven_segment_anode<4>" LOCATE = SITE "E10" LEVEL 1;
+COMP "seven_segment_anode<5>" LOCATE = SITE "D9" LEVEL 1;
+COMP "CLK" LOCATE = SITE "T8" LEVEL 1;
+SCHEMATIC END;
+

@@ -1,0 +1,17 @@
+NET "seven_segment_cathode[7]" LOC = "C6" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_cathode[6]" LOC = "D5" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_cathode[5]" LOC = "E7" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_cathode[4]" LOC = "D6" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_cathode[3]" LOC = "F7" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_cathode[2]" LOC = "C5" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_cathode[1]" LOC = "E6" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_cathode[0]" LOC = "C7" | IOSTANDARD = "LVCMOS33";
+
+NET "seven_segment_anode[5]" LOC = "D9" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_anode[4]" LOC = "E10" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_anode[3]" LOC = "F10" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_anode[2]" LOC = "F9" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_anode[1]" LOC = "E8" | IOSTANDARD = "LVCMOS33";
+NET "seven_segment_anode[0]" LOC = "D8" | IOSTANDARD = "LVCMOS33";
+
+NET "CLK" LOC = "T8" | IOSTANDARD = "LVCMOS33";
