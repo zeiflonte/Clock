@@ -30,7 +30,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Clock is
-	PORT (  CLK : IN  std_logic;	  
+	PORT (  CLK : IN std_logic;	  
+
+			  RST : IN STD_LOGIC;
+			  SET_MODE : IN STD_LOGIC;
+			  inc_minutes : IN std_logic;
+			  inc_hours : IN std_logic;
 
            seven_segment_cathode : OUT  std_logic_vector (7 downto 0);
            seven_segment_anode : OUT  std_logic_vector (5 downto 0));
@@ -43,6 +48,12 @@ signal wire_display_clock : std_logic;
 signal wire_time_clock : std_logic;
 signal wire_segment_value : std_logic_vector( 3 downto 0);
 
+signal wire_SET_MODE_balanced : std_logic;
+signal wire_inc_minutes : std_logic;
+signal wire_inc_hours : std_logic;
+signal wire_RST : std_logic;
+
+
 signal period_needed : std_logic;
 
 -- data
@@ -54,6 +65,31 @@ signal second : std_logic_vector( 3 downto 0);
 signal second1 : std_logic_vector( 3 downto 0);
 
 begin
+
+DebounceU1 : entity work.Debounce PORT MAP(
+	clk => CLK,
+	
+	button => SET_MODE,
+	result => wire_SET_MODE_balanced
+);
+DebounceU2 : entity work.Debounce PORT MAP(
+	clk => CLK,
+	
+	button => inc_minutes,
+	result => wire_inc_minutes
+);
+DebounceU3 : entity work.Debounce PORT MAP(
+	clk => CLK,
+	
+	button => inc_hours,
+	result => wire_inc_hours
+);
+DebounceU4 : entity work.Debounce PORT MAP(
+	clk => CLK,
+	
+	button => RST,
+	result => wire_RST
+);
 
 -- generates CLK for time values updating
 -- and seven segment display updating
@@ -94,6 +130,13 @@ Converter : entity work.Converter PORT MAP(
 -- responsible for real time values updating
 Real_timer : entity work.Real_timer PORT MAP(
 	CLK => wire_time_clock,
+	Update_CLK => wire_display_clock,
+
+	RST => wire_RST,
+	
+	SET_MODE => wire_SET_MODE_balanced,
+	inc_minutes => wire_inc_minutes,
+	inc_hours => wire_inc_hours,
 
 	digit_one => second,
 	digit_two => second1,

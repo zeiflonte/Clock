@@ -1,4 +1,5 @@
 vhdl work "Real_timer.vhd"
+vhdl work "Debounce.vhd"
 vhdl work "Converter.vhd"
 vhdl work "Clk_generator.vhd"
 vhdl work "Anode_display.vhd"

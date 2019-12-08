@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Mon Dec 02 17:15:52 2019">
+<application name="pn" timeStamp="Sun Dec 08 22:42:10 2019">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="A81A7ECCD4F94FE19D2991A3EE2706FB" type="project"/>
-<property name="ProjectIteration" value="14" type="project"/>
+<property name="ProjectIteration" value="27" type="project"/>
 <property name="ProjectFile" value="D:/Study/POTSP/Clock/Clock.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2019-12-02T13:10:39" type="project"/>
 </section>
@@ -24,10 +24,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2019-12-02T13:10:39" type="design"/>
 <property name="PROP_intWbtProjectID" value="A81A7ECCD4F94FE19D2991A3EE2706FB" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="14" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="27" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
+<property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
 <property name="PROP_DevDevice" value="xc6slx9" type="design"/>
@@ -37,7 +38,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-3" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VHDL" value="5" type="source"/>
+<property name="FILE_VHDL" value="6" type="source"/>
 </section>
 </application>
 </document>

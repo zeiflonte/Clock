@@ -53,10 +53,12 @@ begin
 CLK_generation : process(CLK)
 
 begin
--- clk generation. 100 Hz clock to update values
+
+-- clk generation. For 50 MHz clock this generates 1 Hz clock.
+-- Spartan-6 FPGA AX309 provides with 50 MHz oscillator.
 if rising_edge(CLK) then 
 	counter_display <= counter_display + 1;
-	if counter_display < 20000 then -- may try 500000! (25000000)
+	if counter_display < 20000 then
 		CLK_display_tmp <= '1';
 	else 
 		CLK_display_tmp <= '0';
@@ -64,8 +66,6 @@ if rising_edge(CLK) then
 	end if ;
 end if;
 
--- clk generation. For 50 MHz clock this generates 1 Hz clock.
--- Spartan-6 FPGA AX309 provides with 50 MHz oscillator.
 if rising_edge(CLK) then
 	counter_time <= counter_time + 1;
 	if counter_time < 50000000 then

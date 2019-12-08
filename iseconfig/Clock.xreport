@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-12-02T15:02:01</DateModified>
+  <DateModified>2019-12-08T22:17:51</DateModified>
   <ModuleName>Clock</ModuleName>
-  <SummaryTimeStamp>2019-12-02T15:00:46</SummaryTimeStamp>
+  <SummaryTimeStamp>2019-12-08T22:16:51</SummaryTimeStamp>
   <SavedFilePath>D:/Study/POTSP/Clock/iseconfig/Clock.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Study/POTSP/Clock</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>D:/Study/POTSP/Clock\</ImplementationReportsDirectory>
   <DateInitialized>2019-12-02T13:11:06</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

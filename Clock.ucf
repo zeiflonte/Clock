@@ -14,4 +14,9 @@ NET "seven_segment_anode[2]" LOC = "F9" | IOSTANDARD = "LVCMOS33";
 NET "seven_segment_anode[1]" LOC = "E8" | IOSTANDARD = "LVCMOS33";
 NET "seven_segment_anode[0]" LOC = "D8" | IOSTANDARD = "LVCMOS33";
 
+NET "RST" LOC = "L3" | IOSTANDARD = "LVCMOS33";
+NET "SET_MODE" LOC = "C3" | IOSTANDARD = "LVCMOS33";
+NET "inc_minutes" LOC = "D3" | IOSTANDARD = "LVCMOS33";
+NET "inc_hours" LOC = "E4" | IOSTANDARD = "LVCMOS33";
+
 NET "CLK" LOC = "T8" | IOSTANDARD = "LVCMOS33";
