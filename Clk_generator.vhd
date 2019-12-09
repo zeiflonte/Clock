@@ -39,15 +39,18 @@ entity Clk_generator is
     Port ( CLK : in  STD_LOGIC;
 			  
 			  CLK_time : out STD_LOGIC;
-           CLK_display : out  STD_LOGIC);
+           CLK_display : out  STD_LOGIC;
+			  CLK_reg : out std_logic);
 			  
 end Clk_generator;
 
 architecture Behavioral of Clk_generator is
 signal counter_display : integer := 0;
 signal counter_time : integer := 0;
+signal counter_reg : integer := 0;
 signal CLK_display_tmp : std_logic := '0';
 signal CLK_time_tmp: std_logic := '0';
+signal CLK_reg_tmp: std_logic := '0';
 begin
 
 CLK_generation : process(CLK)
@@ -58,7 +61,7 @@ begin
 -- Spartan-6 FPGA AX309 provides with 50 MHz oscillator.
 if rising_edge(CLK) then 
 	counter_display <= counter_display + 1;
-	if counter_display < 20000 then
+	if counter_display < 33461 then
 		CLK_display_tmp <= '1';
 	else 
 		CLK_display_tmp <= '0';
@@ -75,10 +78,21 @@ if rising_edge(CLK) then
 		counter_time <= 0; 
 	end if; 
 end if;
+
+if rising_edge(CLK) then
+	counter_reg <= counter_reg + 1;
+	if counter_reg < 2437500 then -- 2.000.000 2.875.000
+		CLK_reg_tmp <= '1';
+	else 
+		CLK_reg_tmp <= '0';
+		counter_reg <= 0; 
+	end if; 
+end if;
 	
 end process;
 
 CLK_display <= CLK_display_tmp;
 CLK_time <= CLK_time_tmp;
+CLK_reg <= CLK_reg_tmp;
 
 end Behavioral;

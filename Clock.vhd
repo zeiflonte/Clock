@@ -46,12 +46,17 @@ architecture Struct of Clock is
 -- connecting wires
 signal wire_display_clock : std_logic;
 signal wire_time_clock : std_logic;
+signal wire_reg_clock : std_logic;
 signal wire_segment_value : std_logic_vector( 3 downto 0);
 
 signal wire_SET_MODE_balanced : std_logic;
 signal wire_inc_minutes : std_logic;
+signal inc_minutes_asserted : std_logic;
+
 signal wire_inc_hours : std_logic;
 signal wire_RST : std_logic;
+
+signal wire_minutes_reg : std_logic_vector(4 downto 0);
 
 
 signal period_needed : std_logic;
@@ -72,12 +77,12 @@ DebounceU1 : entity work.Debounce PORT MAP(
 	button => SET_MODE,
 	result => wire_SET_MODE_balanced
 );
-DebounceU2 : entity work.Debounce PORT MAP(
-	clk => CLK,
+--DebounceU2 : entity work.Debounce PORT MAP(
+--	clk => CLK,
 	
-	button => inc_minutes,
-	result => wire_inc_minutes
-);
+--	button => inc_minutes,
+--	result => wire_inc_minutes
+--);
 DebounceU3 : entity work.Debounce PORT MAP(
 	clk => CLK,
 	
@@ -97,8 +102,23 @@ Clk_generator : entity work.Clk_generator PORT MAP(
 	CLK => CLK,
 	
 	CLK_display => wire_display_clock,
-	CLK_time => wire_time_clock
+	CLK_time => wire_time_clock,
+	CLK_reg => wire_reg_clock
 );
+
+
+ShiftRegistryMinutes : entity work.Registry PORT MAP(
+	CLK => wire_reg_clock,
+	Din => inc_minutes,
+	SE => '1',
+	Dout => wire_minutes_reg,
+	RST => '0'
+);
+AsserterMinutes : entity work.Asserter PORT MAP(
+	minutes_reg => wire_minutes_reg,
+	result => inc_minutes_asserted
+);
+
 
 -- selects anode and value to display
 -- for each CLK_display rising edge
@@ -135,7 +155,7 @@ Real_timer : entity work.Real_timer PORT MAP(
 	RST => wire_RST,
 	
 	SET_MODE => wire_SET_MODE_balanced,
-	inc_minutes => wire_inc_minutes,
+	inc_minutes => inc_minutes_asserted,
 	inc_hours => wire_inc_hours,
 
 	digit_one => second,

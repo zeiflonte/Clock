@@ -72,15 +72,59 @@ architecture Behavioral of Real_timer is
 
 begin
  
-Calculate_time : PROCESS(CLK, Update_CLK, RST)
+Calculate_time : PROCESS(CLK, SET_MODE, inc_minutes, inc_hours)
 BEGIN
-	IF RST = '1' THEN
-		h1 <= "0000";
-		h <= "0000";
-		m1 <= "0000";
-		m <= "0000";
-		s1 <= "0000";
-		s <= "0000";
+	--Clock Mode
+	--if (mode = '0') then
+	--	r1<=s;
+	--	r2<=s1;
+	--	r3<=m;
+	--	r4<=m1;
+	--	r5<=h;
+	--	r6<=h1;
+	--end if;
+	
+	if (SET_MODE = '0') then
+		if (mode = '0') then
+			mode <= '1';
+		else
+			mode <= '0';
+		end if;
+	
+	elsif (inc_minutes = '0') then
+		-- Set the Digit that will change in CLOCK SET Mode
+		if (mode = '1') then
+			
+			   r3 <= r3 + 1;
+			   if r3 = 9 then
+			      r3 <= "0000";
+			      r4 <= r4 + 1 ;
+			      if r4 = 5 then
+                  r4 <= "0000";
+			      end if;
+					m1 <= r4;
+			   end if;
+				m <= r3;
+			
+	  end if;
+	  
+	elsif (inc_hours = '0') then
+		-- Set the Digit that will change in CLOCK SET Mode
+		if (mode = '1') then
+			
+			   r5 <= r5 + 1 ;
+			   if r5 = 9 OR (r6 = 2 and r5 = 3) then -- 24
+			      r5 <= "0000";
+					r6 <= r6 + 1 ;
+					if r6 = 2 then
+						r6 <= "0000";
+					end if;
+					h1 <= r6;
+			   end if;
+				h <= r5;
+
+	  end if;
+	  
 	elsif (rising_edge(CLK)) then
 		if (mode = '0') then 
 			s <= s + 1; -- s1 5 s 7
@@ -116,55 +160,11 @@ BEGIN
 		r6<=h1;
 			
 		elsif (mode = '1') then
-			m <= r3 ;
-			m1 <= r4 ;
-			h <= r5 ;
-			h1 <= r6 ;
+		--	m <= r3 ;
+		--	m1 <= r4 ;
+		--	h <= r5 ;
+		--	h1 <= r6 ;
 		end if;
-	end if;
-	
-	--Clock Mode
-	--if (mode = '0') then
-	--	r1<=s;
-	--	r2<=s1;
-	--	r3<=m;
-	--	r4<=m1;
-	--	r5<=h;
-	--	r6<=h1;
-	--end if;
-	
-	if (rising_edge(Update_CLK)) then
-		if (SET_MODE = '1') then
-			if (mode = '0') then
-				mode <= '1';
-			else
-				mode <= '0';
-			end if;
-		end if;
-
-		-- Set the Digit that will change in CLOCK SET Mode
-		if (mode = '1') then
-			if (inc_minutes = '1') then
-			   r3 <= r3 + 1;
-			   if r3 = 9 then
-			      r3 <= "0000";
-			      r4 <= r4 + 1 ;
-			      if r4 = 5 then
-                  r4 <= "0000";
-			      end if;
-			   end if;
-			end if;
-			if (inc_hours = '1') then
-			   r5 <= r5 + 1 ;
-			   if r5 = 9 OR (r6 = 2 and r5 = 3) then -- 24
-			      r5 <= "0000";
-					r6 <= r6 + 1 ;
-					if r6 = 2 then
-						r6 <= "0000";
-					end if;
-			   end if;
-			end if;
-	  end if;
 	end if;
 	
 END Process;

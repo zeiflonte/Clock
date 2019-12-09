@@ -1,76 +1,140 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Dec 08 22:23:54 2019
+Mon Dec 09 20:27:06 2019
 
 drc -z Clock.ncd Clock.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/GND_11_o_r4[3]_AND_21_o is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net DebounceU4/result is
+   Real_timer/inc_hours_r5[3]_AND_94_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net DebounceU1/result is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/inc_hours_r5[3]_AND_29_o is sourced by a combinatorial pin. This
+   Real_timer/inc_hours_r5[3]_AND_88_o is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/inc_minutes_r3[3]_AND_11_o is sourced by a combinatorial pin. This
+   Real_timer/inc_minutes_m[3]_AND_87_o is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/inc_minutes_r3[3]_AND_13_o is sourced by a combinatorial pin. This
+   Real_timer/inc_hours_r6[3]_AND_96_o is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/inc_hours_r5[3]_AND_25_o is sourced by a combinatorial pin. This
+   Real_timer/inc_hours_r6[3]_AND_98_o is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/inc_minutes_r3[3]_AND_9_o is sourced by a combinatorial pin. This
+   Real_timer/inc_hours_h[3]_AND_112_o is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/GND_11_o_r4[3]_AND_15_o is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/GND_11_o_r4[3]_AND_17_o is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/GND_11_o_r4[3]_AND_19_o is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/inc_minutes_r3[3]_AND_7_o is sourced by a combinatorial pin. This
+   Real_timer/inc_hours_h[3]_AND_114_o is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/inc_hours_r5[3]_AND_27_o is sourced by a combinatorial pin. This
+   Real_timer/inc_hours_h[3]_AND_117_o is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/inc_hours_r5[3]_AND_23_o is sourced by a combinatorial pin. This
+   Real_timer/inc_hours_h[3]_AND_119_o is sourced by a combinatorial pin. This
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/GND_11_o_r6[3]_AND_37_o is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
+   Real_timer/inc_minutes_m[3]_AND_82_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/GND_11_o_r6[3]_AND_35_o is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
+   Real_timer/inc_minutes_m[3]_AND_84_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/GND_11_o_r6[3]_AND_33_o is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
+   Real_timer/inc_hours_h1[3]_AND_110_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   Real_timer/GND_11_o_r6[3]_AND_31_o is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-DRC detected 0 errors and 17 warnings.  Please see the previously displayed
+   Real_timer/inc_hours_h1[3]_AND_109_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_hours_h1[3]_AND_106_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_hours_h1[3]_AND_104_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_hours_r5[3]_AND_90_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_m1[3]_AND_79_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_m1[3]_AND_76_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_m1[3]_AND_75_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_r4[3]_AND_70_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_m1[3]_AND_72_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_r4[3]_AND_64_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_r4[3]_AND_66_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_r3[3]_AND_62_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_r3[3]_AND_60_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_r3[3]_AND_58_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_r3[3]_AND_56_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_r4[3]_AND_68_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_hours_r5[3]_AND_92_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_hours_r6[3]_AND_102_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_hours_r6[3]_AND_100_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Real_timer/inc_minutes_m[3]_AND_81_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+DRC detected 0 errors and 33 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
